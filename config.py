@@ -1,8 +1,14 @@
+import os
+
 def getConfig():
   class Args:
     exp_num = 0
     dataset ='DUTS'
     data_path ='data/'
+
+    # local models weights paths
+    efficientnet_local_model_path = None
+    tracer_model_path = None
 
     # Model parameter settings
     arch = '7'
