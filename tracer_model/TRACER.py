@@ -15,7 +15,10 @@ class TRACER(nn.Module):
     def __init__(self, cfg):
         super().__init__()
         if cfg.efficientnet_local_model_path:
-            self.model = EfficientNet.from_pretrained_local(cfg.efficientnet_local_model_path)
+            self.model = EfficientNet.from_pretrained(
+                model_name=f'efficientnet-b{cfg.arch}',
+                weights_path=cfg.efficientnet_local_model_path
+                )
         else:
             self.model = EfficientNet.from_pretrained(f'efficientnet-b{cfg.arch}', advprop=True)
         self.block_idx, self.channels = get_model_shape()
