@@ -15,7 +15,7 @@ from dataloader import get_train_augmentation, get_test_augmentation, get_loader
 from util.utils import AvgMeter
 from util.metrics import Evaluation_metrics
 from util.losses import Optimizer, Scheduler, Criterion
-from model.TRACER import TRACER
+from tracer_model.TRACER import TRACER
 
 
 class Trainer():

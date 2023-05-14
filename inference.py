@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from torchvision.transforms import transforms
 from tqdm import tqdm
 from dataloader import get_test_augmentation, get_loader
-from model.TRACER import TRACER
+from tracer_model.TRACER import TRACER
 from util.utils import load_pretrained
 
 
